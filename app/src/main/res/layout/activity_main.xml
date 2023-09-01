@@ -1,0 +1,116 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:background="@color/gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/arWrapper"
+        android:clipChildren="true"
+        app:cardCornerRadius="24dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <io.github.sceneview.ar.ArSceneView
+            android:id="@+id/sceneView"
+            android:layout_width="400dp"
+            android:layout_height="match_parent" >
+        </io.github.sceneview.ar.ArSceneView>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/showButton"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:padding="20dp"
+        app:cardCornerRadius="32dp"
+        android:clipChildren="true"
+        app:layout_constraintBottom_toBottomOf="@id/arWrapper"
+        app:layout_constraintStart_toStartOf="@id/arWrapper"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="24dp"
+        >
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:padding="15dp"
+            android:background="@color/white"
+            android:src="@drawable/back_icon"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <HorizontalScrollView
+        android:id="@+id/plantImagesScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arWrapper">
+
+        <LinearLayout
+            android:id="@+id/plantImagesLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+
+            >
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:id="@+id/loadingView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#40000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            app:indicatorSize="64dp"
+            app:trackColor="#3FFFFFFF" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/white"
+        android:backgroundTint="@color/translucent"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/arWrapper" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

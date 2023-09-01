@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Pianta.la</string>
+    <string name="place_object">Place object</string>
+    <string name="new_object">New object</string>
+    <string name="instant_placement">Instant Placement</string>
+    <string name="depth_placement">Depth Placement</string>
+    <string name="plane_placement">Plane Placement</string>
+    <string name="best_placement">Best Placement</string>
+    <string name="preview_heading">Pianta.la</string>
+    <string name="main_desc">Piante da appartamento per trasformare la vostra casa in un oasy rigogliosa.Scoptite l\'assortimento e rentede il vostro spazio più sereno e rigenerante</string>
+    <string name="preview_button">Iniziamo</string>
+</resources>
