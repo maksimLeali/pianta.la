@@ -10,11 +10,13 @@
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:windowTranslucentNavigation">true</item>
         <item name="android:textColor">@android:color/white</item>
+
     </style>
     <style name="Theme.SceneViewSample.Toolbar" parent="ThemeOverlay.MaterialComponents.ActionBar">
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="logo">@drawable/splash_screen_image</item>
+
     </style>
     <style name="Theme.SpashScreenTest" parent="Theme.AppCompat.NoActionBar" />
     <style name="SplashScreen" parent="Theme.AppCompat.NoActionBar" />

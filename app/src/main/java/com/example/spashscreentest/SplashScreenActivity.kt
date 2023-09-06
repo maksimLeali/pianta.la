@@ -17,7 +17,7 @@ class SplashScreenActivity : AppCompatActivity(R.layout.activity_splash_screen) 
         val fadeInAmination = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         splashText.startAnimation(fadeInAmination)
         Handler().postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, PreviewActivity::class.java))
             finish()
         }, 3000)
     }

@@ -30,6 +30,7 @@ import androidx.core.view.isGone
 import com.google.ar.core.Config
 
 
+
 import io.github.sceneview.math.Position
 import io.github.sceneview.ar.ArSceneView
 import io.github.sceneview.ar.getDescription
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     lateinit var loadingView: View
     lateinit var statusText: TextView
     lateinit var plantImagesLayout: LinearLayout
-
+    val customFontStyle = R.style.CustomFontStyle
     data class Model(
         val fileLocation: String,
         val scaleUnits: Float? = null,
@@ -198,6 +199,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                     LinearLayout.LayoutParams.WRAP_CONTENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT
                 )
+                //setTextAppearance(this.context, customFontStyle)
                 textSize= 22F
                 text = plants[index].name
                 setTypeface(null, Typeface.BOLD)
@@ -210,6 +212,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                     LinearLayout.LayoutParams.WRAP_CONTENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT
                 )
+                // setTextAppearance(this.context, customFontStyle)
                 textSize= 16F
                 text = String.format("%.2f €", plants[index].priceEuro)
                 setTextColor(Color.BLACK)
@@ -315,6 +318,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                         LinearLayout.LayoutParams.WRAP_CONTENT
                     )
                     text = plants[index].name
+                    // setTextAppearance(this.context, customFontStyle)
                     setTypeface(null, Typeface.BOLD)
                     setTextColor(Color.BLACK)
                 }
@@ -325,6 +329,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                         LinearLayout.LayoutParams.WRAP_CONTENT,
                         LinearLayout.LayoutParams.WRAP_CONTENT
                     )
+                    // setTextAppearance(this.context, customFontStyle)
                     text = String.format("%.2f €", plants[index].priceEuro)
                     setTextColor(Color.BLACK)
                 }
@@ -369,7 +374,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                 glbFileLocation = plant.glbModel.fileLocation,
                 autoAnimate = true,
                 scaleToUnits = plant.glbModel.scaleUnits,
-                centerOrigin = Position(y =-.1F)
+                centerOrigin = Position(y =-1F)
             ) {
                 sceneView.planeRenderer.isVisible = true
                 sceneView.planeRenderer.isShadowReceiver= true

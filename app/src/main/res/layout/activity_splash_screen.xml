@@ -15,8 +15,9 @@
         android:layout_height="wrap_content"
         android:text="Pianta.la"
         android:id="@+id/splash_text"
+        android:textAppearance="@style/CustomFontStyle"
         android:textAlignment="center"
         android:textColor="#fff"
-        android:textSize="32sp" />
+        android:textSize="34sp" />
 
 </LinearLayout>
